@@ -8,6 +8,21 @@ Tdf.Dapper is an open source library, he Dapper based on the package of the basi
 
 - [https://www.nuget.org/packages/Tdf.Dapper/](https://www.nuget.org/packages/Tdf.Dapper/)
 
+## Features
+For these extensions to work, the entity in question MUST have a key-property, a property named "id" or decorated with a [Key] attribute.
+
+```
+[Table("Act_Action")]
+public class Action
+{
+	[Key]
+	public Guid ActionId { get; set; }
+	public string ActionName { get; set; }
+	public int ActionValue { get; set; }
+}
+```
+
+
 ## Insert methods
 
 ```
